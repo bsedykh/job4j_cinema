@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link th:href = "@{/css/bootstrap.min.css}" rel="stylesheet">
+    <script th:src="@{/js/code.jquery.com_jquery-3.7.0.min.js}"></script>
+    <script th:src="@{/js/popper.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+
+    <title>Расписание</title>
+</head>
+<body>
+<div class="container-fluid p-0">
+    <header th:insert="blocks/header :: header"></header>
+    <div class="container">
+        <div class="row">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Дата и время начала</th>
+                    <th scope="col">Зал</th>
+                    <th scope="col">Название фильма</th>
+                    <th scope="col">Жанр</th>
+                    <th scope="col">Продолжительность, мин.</th>
+                    <th scope="col">Возраст</th>
+                    <th scope="col">Цена билета</th>
+                    <th scope="col">Билеты</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="filmSession: ${filmSessions}">
+                    <td th:text="${#temporals.format(filmSession.startTime, 'dd MMMM yyyy HH:mm')}"/>
+                    <td th:text="${filmSession.hall.name}"/>
+                    <td th:text="${filmSession.film.name}"/>
+                    <td th:text="${filmSession.film.genre}"/>
+                    <td th:text="${filmSession.film.durationInMinutes}"/>
+                    <td th:text="${filmSession.film.minimalAge}"/>
+                    <td th:text="${filmSession.price}"/>
+                    <td><a th:text="Купить" th:href="@{/film-sessions/{sessionId}(sessionId=${filmSession.id})}"></a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer th:insert="blocks/footer :: footer"></footer>
+</div>
+</body>
+</html>
