@@ -22,6 +22,6 @@ public class FileController {
         if (contentOptional.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(contentOptional.get().getContent());
+        return ResponseEntity.ok(contentOptional.get().content());
     }
 }

@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 import ru.job4j.cinema.dto.HallDto;
 import ru.job4j.cinema.repository.HallRepository;
 
-import java.util.List;
+import java.util.Collection;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -32,7 +32,7 @@ public class DefaultHallService implements HallService {
     }
 
     @Override
-    public List<HallDto> findAll() {
+    public Collection<HallDto> findAll() {
         return hallRepository.findAll().stream()
                 .map(hall -> new HallDto(
                         hall.getId(),

@@ -1,6 +1,7 @@
 package ru.job4j.cinema.model;
 
 import java.util.Map;
+import java.util.Objects;
 
 public class Film {
     public static final Map<String, String> COLUMN_MAPPING = Map.of(
@@ -97,5 +98,22 @@ public class Film {
 
     public void setFileId(int fileId) {
         this.fileId = fileId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Film film = (Film) o;
+        return id == film.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

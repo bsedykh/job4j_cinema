@@ -8,7 +8,7 @@ import ru.job4j.cinema.model.FilmSession;
 import ru.job4j.cinema.repository.FilmSessionRepository;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -28,7 +28,7 @@ public class DefaultFilmSessionService implements FilmSessionService {
     }
 
     @Override
-    public List<FilmSessionDto> findAll() {
+    public Collection<FilmSessionDto> findAll() {
         var result = new ArrayList<FilmSessionDto>();
         var films = filmService.findAll().stream()
                 .collect(Collectors.toMap(FilmDto::id, filmDto -> filmDto));

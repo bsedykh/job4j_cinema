@@ -4,7 +4,7 @@ import org.springframework.stereotype.Repository;
 import org.sql2o.Sql2o;
 import ru.job4j.cinema.model.FilmSession;
 
-import java.util.List;
+import java.util.Collection;
 import java.util.Optional;
 
 @Repository
@@ -16,7 +16,7 @@ public class Sql2oFilmSessionRepository implements FilmSessionRepository {
     }
 
     @Override
-    public List<FilmSession> findAll() {
+    public Collection<FilmSession> findAll() {
         try (var connection = sql2o.open()) {
             var query = connection.createQuery("SELECT * FROM film_sessions");
             return query.setColumnMappings(FilmSession.COLUMN_MAPPING)

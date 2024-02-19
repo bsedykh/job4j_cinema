@@ -4,7 +4,7 @@ import org.springframework.stereotype.Repository;
 import org.sql2o.Sql2o;
 import ru.job4j.cinema.model.Hall;
 
-import java.util.List;
+import java.util.Collection;
 import java.util.Optional;
 
 @Repository
@@ -28,7 +28,7 @@ public class Sql2oHallRepository implements HallRepository {
     }
 
     @Override
-    public List<Hall> findAll() {
+    public Collection<Hall> findAll() {
         try (var connection = sql2o.open()) {
             var query = connection.createQuery("SELECT * FROM halls");
             return query.setColumnMappings(Hall.COLUMN_MAPPING)

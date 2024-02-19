@@ -8,7 +8,7 @@ import ru.job4j.cinema.repository.FilmRepository;
 import ru.job4j.cinema.repository.GenreRepository;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -24,7 +24,7 @@ public class DefaultFilmService implements FilmService {
     }
 
     @Override
-    public List<FilmDto> findAll() {
+    public Collection<FilmDto> findAll() {
         var result = new ArrayList<FilmDto>();
         var genres = genreRepository.findAll().stream()
                 .collect(Collectors.toMap(Genre::getId, genre -> genre));
