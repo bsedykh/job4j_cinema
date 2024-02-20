@@ -16,7 +16,8 @@ public class FilmSessionController {
     private final FilmSessionService filmSessionService;
     private final TicketService ticketService;
 
-    public FilmSessionController(FilmSessionService filmSessionService, TicketService ticketService) {
+    public FilmSessionController(FilmSessionService filmSessionService,
+                                 TicketService ticketService) {
         this.filmSessionService = filmSessionService;
         this.ticketService = ticketService;
     }
