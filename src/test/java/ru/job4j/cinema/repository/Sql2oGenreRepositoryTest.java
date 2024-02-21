@@ -3,6 +3,7 @@ package ru.job4j.cinema.repository;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import ru.job4j.cinema.model.Genre;
+import ru.job4j.cinema.repository.genre.Sql2oGenreRepository;
 import ru.job4j.cinema.util.Sql2oClient;
 
 import java.io.IOException;

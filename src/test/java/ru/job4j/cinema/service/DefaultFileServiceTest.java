@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test;
 import ru.job4j.cinema.dto.FileDto;
 import ru.job4j.cinema.model.File;
 import ru.job4j.cinema.provider.ContentProvider;
-import ru.job4j.cinema.repository.FileRepository;
+import ru.job4j.cinema.repository.file.FileRepository;
+import ru.job4j.cinema.service.file.DefaultFileService;
 
 import java.util.Optional;
 

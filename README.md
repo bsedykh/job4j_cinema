@@ -33,13 +33,13 @@
 
 ## Примеры страниц
 ### Расписание сеансов:
-![](img/film-sessions.png)
+![film-sessions](https://github.com/bsedykh/job4j_cinema/assets/84812761/cf81f16d-7be8-40a0-b79d-754b4e46d1c0)
 
 ### Покупка билета:
-![](img/buy.png)
+![buy](https://github.com/bsedykh/job4j_cinema/assets/84812761/4457a170-cd00-4b57-bad1-884a6e6bb63b)
 
 ### Кинотека:
-![](img/films.png)
+![films](https://github.com/bsedykh/job4j_cinema/assets/84812761/5e462eaa-950f-43b9-ade6-01cf7161e1d5)
 
 ### Регистрация пользователя:
-![](img/register.png)
+![register](https://github.com/bsedykh/job4j_cinema/assets/84812761/d51fea21-cb97-427a-919f-1afcc8bb71cd)

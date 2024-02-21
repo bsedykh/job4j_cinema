@@ -45,7 +45,7 @@
         <div class="mb-3">
             <p th:text="${'Дата и время окончания: ' + #temporals.format(filmSession.endTime, 'dd MMMM yyyy HH:mm')}"></p>
         </div>
-        <form class="mt-3" th:action="@{/film-sessions/buy}" method="post">
+        <form class="mt-3" th:action="@{/tickets/buy}" method="post">
             <div class="mb-3">
                 <h4>Купить билет:</h4>
             </div>

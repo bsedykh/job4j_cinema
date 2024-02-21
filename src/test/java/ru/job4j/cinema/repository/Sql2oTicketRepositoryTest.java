@@ -4,6 +4,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import ru.job4j.cinema.model.Ticket;
+import ru.job4j.cinema.repository.ticket.Sql2oTicketRepository;
 import ru.job4j.cinema.util.Sql2oClient;
 
 import java.io.IOException;
